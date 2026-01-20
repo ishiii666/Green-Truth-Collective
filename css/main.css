@@ -6,7 +6,8 @@
     --xr-green-dark: #8cb82b;
     --xr-green-light: #d8f5a2;
     --xr-blue: #8acdf1;
-    --xr-pink: #ed1b71;
+    --xr-alert: #ff9900;
+    /* Tactical Orange replaces Pink */
     --xr-yellow: #f6db0a;
     --xr-purple: #4a3b8d;
     --xr-black: #1a1a1a;
@@ -1559,7 +1560,7 @@ section {
 .manifesto-body {
     background: linear-gradient(180deg, #121e12 0%, #0a110a 100%);
     color: #dedede;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
     position: relative;
     overflow-x: hidden;
 }
@@ -1580,7 +1581,7 @@ section {
 .manifesto-container {
     max-width: 1550px;
     margin: 0 auto;
-    padding: 5rem 2rem;
+    padding: 1.5rem 2rem;
     position: relative;
     z-index: 1;
 }
@@ -1591,7 +1592,7 @@ section {
     border: 1px solid rgba(184, 226, 75, 0.1);
     border-top: 4px solid var(--xr-green);
     padding: 5rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     border-radius: 12px;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
     position: relative;
@@ -1824,6 +1825,270 @@ section {
     color: rgba(0, 0, 0, 0.8);
     max-width: 750px;
     line-height: 1.6;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+/* Take Action Redesign */
+.action-body {
+    background: linear-gradient(180deg, #121e12 0%, #0a110a 100%);
+    color: #dedede;
+    padding-bottom: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.action-body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.action-container {
+    max-width: 1550px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    /* Reduced top padding */
+    position: relative;
+    z-index: 1;
+}
+
+.campaign-card-featured {
+    background: #1a1202;
+    /* Tactical dark amber */
+    border: 1px solid rgba(255, 153, 0, 0.2);
+    border-left: 6px solid var(--xr-alert);
+    padding: 3rem;
+    margin-bottom: 4rem;
+    border-radius: 12px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+}
+
+.campaign-card-featured h3 {
+    color: var(--xr-alert);
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.campaign-card-featured p {
+    font-size: 1.25rem;
+    color: #ddd;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.action-needed-box {
+    background: rgba(255, 153, 0, 0.05);
+    border: 1px dashed rgba(255, 153, 0, 0.2);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.action-needed-box strong {
+    color: var(--xr-alert);
+    font-family: 'Unbounded', sans-serif;
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.action-paths-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+
+.action-path-card {
+    background: #1c2e1c;
+    border: 1px solid rgba(184, 226, 75, 0.1);
+    padding: 3rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.action-path-card:hover {
+    background: #233a23;
+    border-color: var(--xr-green);
+    transform: translateY(-10px);
+}
+
+.path-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.action-path-card i.main-icon {
+    font-size: 2.2rem;
+    color: var(--xr-green);
+}
+
+.path-red {
+    border-left: 4px solid var(--xr-alert);
+}
+
+.path-red i.main-icon {
+    color: var(--xr-alert);
+}
+
+.action-path-card h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--xr-white);
+    line-height: 1.2;
+}
+
+.action-path-card .subtitle {
+    color: var(--xr-green);
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    letter-spacing: 0.05em;
+}
+
+.path-red .subtitle {
+    color: var(--xr-alert);
+}
+
+.action-path-card .path-content {
+    font-size: 1.15rem;
+    color: #ccc;
+    line-height: 1.8;
+    flex-grow: 1;
+}
+
+.action-path-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.action-path-card li {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.action-path-card li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--xr-green);
+    font-size: 0.8rem;
+    top: 6px;
+}
+
+.path-red li::before {
+    color: var(--xr-alert);
+}
+
+.btn-impact {
+    background: var(--xr-alert);
+    border: 1px solid var(--xr-alert);
+    color: black;
+    padding: 1rem 2rem;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-impact:hover {
+    background: transparent;
+    color: var(--xr-alert);
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 2.5rem 0;
+}
+
+.tag-badge {
+    background: rgba(184, 226, 75, 0.08);
+    border: 1px solid rgba(184, 226, 75, 0.15);
+    color: var(--xr-green);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.final-cta-section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    text-align: center;
+    padding: 6rem 4rem;
+    /* Reduced padding */
+    background: #000;
+    border: 2px solid var(--xr-green);
+    border-radius: 12px;
+}
+
+.final-cta-section h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 2rem;
+    color: var(--xr-white);
+    text-shadow: 0 0 30px rgba(184, 226, 75, 0.3);
+}
+
+.final-cta-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: #bbb;
+    line-height: 1.8;
+}
+
+.final-cta-section strong {
+    color: var(--xr-green);
+    font-family: 'Unbounded', sans-serif;
+}
+
+.btn-group-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+@media (max-width: 1100px) {
+    .action-paths-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.action-hero-caption {
+    font-family: 'Figtree', sans-serif;
+    font-size: 1.15rem;
+    color: rgba(0, 0, 0, 0.85);
+    max-width: 850px;
+    line-height: 1.7;
     margin: 0 auto;
     font-weight: 600;
 }
