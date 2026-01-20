@@ -31,7 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Smooth Tab Transitions (if any were used, but we use full page links)
-    // For now, let's just log that the collective is active
+    // 4. FAQ Accordion Toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all other items
+            faqItems.forEach(i => i.classList.remove('active'));
+
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
     console.log("%c [ GREEN TRUTH COLLECTIVE ] %c Systems Active. Truth Encrypted. ", "background: #231f20; color: #a8cf45; font-weight: bold; padding: 4px;", "color: #231f20;");
 });

@@ -1346,12 +1346,12 @@ section {
 }
 
 .main-footer {
-    background-color: #081108;
-    /* Rich Earthy Black-Green */
-    color: #e0eed4;
-    /* Soft Sage Text */
-    padding: 6rem 0 3rem;
-    border-top: 1px solid rgba(184, 226, 75, 0.2);
+    background-color: #050805;
+    color: #dedede;
+    padding: 3rem 0 2rem;
+    /* Compact padding */
+    border-top: 2px solid var(--xr-green);
+    /* Stronger indicator */
     position: relative;
     overflow: hidden;
 }
@@ -1370,9 +1370,10 @@ section {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 4rem;
-    margin-bottom: 4rem;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 2rem;
+    /* Reduced gap */
+    margin-bottom: 3rem;
     position: relative;
     z-index: 2;
 }
@@ -1390,10 +1391,10 @@ section {
 }
 
 .footer-logo {
-    height: 60px;
+    height: 50px;
     width: auto;
-    filter: brightness(0) invert(1);
-    /* Make logo white for dark theme */
+    filter: drop-shadow(0 0 8px rgba(184, 226, 75, 0.4));
+    /* Added glow for visibility */
 }
 
 .footer-brand h2 {
@@ -1432,10 +1433,11 @@ section {
 }
 
 .footer-nav h4 {
-    font-size: 0.9rem;
-    color: var(--xr-white);
-    margin-bottom: 2rem;
-    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+    color: var(--xr-green);
+    /* More activist color */
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.1em;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -1464,8 +1466,8 @@ section {
 }
 
 .footer-bottom {
-    padding-top: 3rem;
-    border-top: 1px solid rgba(224, 238, 212, 0.1);
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2091,4 +2093,230 @@ section {
     line-height: 1.7;
     margin: 0 auto;
     font-weight: 600;
+}
+
+/* Contact Page Styles */
+.contact-body {
+    background: linear-gradient(180deg, #0a110a 0%, #050505 100%);
+    color: #dedede;
+    padding-bottom: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.security-alert-box {
+    background: #2a0a0a;
+    border: 2px solid #ed1c1c;
+    border-radius: 8px;
+    padding: 3rem;
+    margin: 4rem auto;
+    max-width: 1100px;
+    box-shadow: 0 0 40px rgba(237, 28, 28, 0.15);
+}
+
+.security-alert-box h3 {
+    color: #ff4d4d;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.security-alert-box p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #ffcccc;
+}
+
+.security-alert-box strong {
+    color: #fff;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.contact-section-title {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--xr-green);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.contact-section-title i {
+    font-size: 1.5rem;
+}
+
+.whistleblower-methods {
+    display: grid;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.do-not-box {
+    background: rgba(237, 28, 28, 0.1);
+    border: 1px solid rgba(237, 28, 28, 0.5);
+    padding: 2rem;
+    border-radius: 4px;
+    margin-bottom: 3rem;
+}
+
+.do-not-box h4 {
+    color: #ff4d4d;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.method-card {
+    background: rgba(184, 226, 75, 0.03);
+    border: 1px solid rgba(184, 226, 75, 0.2);
+    padding: 3rem;
+    border-radius: 8px;
+}
+
+.method-card h3 {
+    font-size: 1.4rem;
+    color: var(--xr-white);
+    margin-bottom: 2rem;
+}
+
+.instruction-box {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(184, 226, 75, 0.1);
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.instruction-box h4 {
+    color: var(--xr-green);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.placeholder-code-box {
+    background: #000;
+    border: 1px solid #333;
+    padding: 1.2rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--xr-green);
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+    word-break: break-all;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(184, 226, 75, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    border-color: rgba(184, 226, 75, 0.3);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--xr-white);
+    transition: var(--transition);
+}
+
+.faq-question h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: none;
+}
+
+.faq-icon {
+    font-size: 0.9rem;
+    color: var(--xr-green);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+.faq-answer-inner {
+    padding: 0 2rem 2rem 2rem;
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.faq-item.active {
+    border-color: var(--xr-green);
+    background: rgba(184, 226, 75, 0.02);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.support-box {
+    background: rgba(184, 226, 75, 0.05);
+    border: 1px solid var(--xr-green);
+    padding: 4rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.support-box h3 {
+    color: var(--xr-green);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.support-box p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.collab-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 900px) {
+    .collab-grid {
+        grid-template-columns: 1fr;
+    }
 }
