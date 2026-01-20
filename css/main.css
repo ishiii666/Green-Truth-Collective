@@ -1505,11 +1505,227 @@ section {
         padding: 0 1rem;
     }
 
-    .brand-desc {
-        max-width: 100%;
-    }
-
     .logo-img {
         height: 50px;
     }
+}
+
+/* Manifesto Page Styles */
+.manifesto-body {
+    background: #0a0a0a;
+    color: #dedede;
+    padding-bottom: 5rem;
+}
+
+.manifesto-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.manifesto-block {
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 4px solid var(--xr-pink);
+    padding: 3rem;
+    margin-bottom: 4rem;
+    border-radius: 8px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+.manifesto-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 2rem;
+}
+
+.manifesto-header i {
+    font-size: 2.2rem;
+    color: var(--xr-pink);
+    text-shadow: 0 0 15px rgba(237, 27, 113, 0.3);
+}
+
+.manifesto-header h3 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--xr-white);
+    letter-spacing: -0.02em;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.manifesto-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+    font-weight: 400;
+}
+
+.manifesto-text p {
+    margin-bottom: 1.5rem;
+}
+
+.manifesto-quote-box {
+    background: linear-gradient(90deg, rgba(184, 226, 75, 0.05) 0%, transparent 100%);
+    border-left: 4px solid var(--xr-green);
+    padding: 2rem;
+    margin: 2.5rem 0;
+}
+
+.manifesto-quote-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--xr-white);
+    line-height: 1.6;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.principle-card {
+    background: #080808;
+    border: 1px solid #1a1a1a;
+    border-left: 3px solid var(--xr-green);
+    padding: 2rem;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.principle-card:hover {
+    border-color: rgba(184, 226, 75, 0.3);
+    background: #0c0c0c;
+    transform: translateX(5px);
+}
+
+.principle-card h4 {
+    color: var(--xr-green);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.principle-card p {
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.greenwashing-steps {
+    border-left: 2px dashed #333;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+}
+
+.step-item {
+    margin-bottom: 1.5rem;
+}
+
+.step-item strong {
+    color: var(--xr-green);
+    font-family: 'JetBrains Mono', monospace;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.warning-box {
+    border: 2px solid var(--xr-pink);
+    background: rgba(237, 27, 113, 0.08);
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 3rem;
+}
+
+.warning-box h4 {
+    color: var(--xr-pink);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.demand-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.demand-card {
+    border: 1px solid rgba(237, 27, 113, 0.3);
+    background: rgba(237, 27, 113, 0.03);
+    padding: 2.5rem;
+    border-radius: 8px;
+    position: relative;
+}
+
+.demand-card-header {
+    color: var(--xr-pink);
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    font-family: 'Unbounded', sans-serif;
+    border-bottom: 1px solid rgba(237, 27, 113, 0.2);
+    padding-bottom: 0.8rem;
+    display: block;
+}
+
+.demand-list {
+    list-style: none;
+    padding: 0;
+}
+
+.demand-list li {
+    margin-bottom: 1.2rem;
+    color: #eee;
+    line-height: 1.6;
+}
+
+.demand-list strong {
+    color: var(--xr-green);
+}
+
+.target-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.target-list li {
+    margin-bottom: 1.2rem;
+    color: #ccc;
+    font-size: 1.1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.target-list li::before {
+    content: '▶';
+    color: var(--xr-pink);
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.target-list strong {
+    color: var(--xr-green);
+    min-width: 250px;
+}
+
+.manifesto-caption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.8);
+    max-width: 750px;
+    line-height: 1.6;
+    margin: 0 auto;
+    font-weight: 600;
 }

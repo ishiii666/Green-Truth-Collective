@@ -54,57 +54,160 @@
         </div>
     </nav>
 
-    <section class="hero theme-black">
+    <section class="hero theme-green">
         <div class="container">
-            <div class="box-action" style="border-color: var(--xr-pink); background-color: rgba(237, 27, 113, 0.1);">
-                <h2><i class="fas fa-shield-halved fa-icon" style="color: var(--xr-pink);"></i>SECURITY PROTOCOL</h2>
-                <p>Corporate fraud is a crime, but those who expose it face significant risk. Follow these protocols
-                    exactly to protect yourself and the collective.</p>
+            <div class="hero-content">
+                <h2>SECURE COMMS</h2>
+                <p class="shame-caption">Established protocols for whistleblowers and digital operatives. Zero trace.
+                    Absolute security. If you are an insider with evidence, follow the security protocols below.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="theme-black">
+        <div class="container">
+            <div class="ongoing-status-card" style="border-color: var(--xr-pink); max-width: 800px; margin: 0 auto;">
+                <h3 style="color: var(--xr-pink);"><i class="fas fa-shield-halved"></i> SECURITY PROTOCOL V1.0</h3>
+                <p>Corporate monitoring is real. Follow these steps before initiating contact:</p>
                 <div
-                    style="background-color: var(--xr-pink); color: white; padding: 1rem; margin-top: 1rem; font-weight: 800;">
-                    NEVER USE COMPANY DEVICES OR NETWORKS.
+                    style="background: rgba(237, 27, 113, 0.1); border: 1px dashed var(--xr-pink); padding: 1.5rem; margin-top: 2rem; border-radius: 4px;">
+                    <ul style="list-style: none; padding: 0; color: white;">
+                        <li style="margin-bottom: 1rem;"><i class="fas fa-check" style="color: var(--xr-pink);"></i>
+                            NEVER use company devices or networks.</li>
+                        <li style="margin-bottom: 1rem;"><i class="fas fa-check" style="color: var(--xr-pink);"></i> Use
+                            Public Wi-Fi or encrypted mobile hotspots.</li>
+                        <li style="margin-bottom: 1rem;"><i class="fas fa-check" style="color: var(--xr-pink);"></i>
+                            Access communications through a secondary, burner device if possible.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="theme-white">
+    <section class="exposure-section">
         <div class="container">
-            <h2 style="margin-bottom: 4rem;">SECURE CHANNELS</h2>
+            <h2 style="color: white; text-align: center; margin-bottom: 4rem;">SECURE CHANNELS</h2>
+
             <div class="stats-grid">
-                <div class="box-action">
-                    <h3><i class="fas fa-user-secret fa-icon"></i>SecureDrop</h3>
-                    <p>Access our .onion address via Tor Browser for anonymous document submission.</p>
-                    <code
-                        style="background: #eee; padding: 0.5rem 1rem; display: block; margin-top: 1rem;">greentruthabcdef.onion</code>
-                </div>
-                <div class="box-action">
-                    <h3><i class="fas fa-envelope-open-text fa-icon"></i>PGP Email</h3>
-                    <p>Use encrypted email for communications. Fingerprint below.</p>
-                    <code
-                        style="background: #eee; padding: 0.5rem 1rem; display: block; margin-top: 1rem;">1234 5678 90AB CDEF...</code>
+
+                <article class="exposure-card">
+                    <header class="exposure-header"
+                        style="background: #111; color: white; border-bottom: 1px solid #333;">
+                        <div class="meta">
+                            <span class="id">PROTOCOL: ONION</span>
+                            <span class="date">ANONYMOUS</span>
+                        </div>
+                    </header>
+                    <div class="exposure-content">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <i class="fas fa-user-secret" style="font-size: 1.5rem; color: var(--xr-green);"></i>
+                            <h3 style="margin: 0; font-family: 'Unbounded';">SecureDrop</h3>
+                        </div>
+                        <p>Our primary channel for document leaks. Use the Tor Browser to access our .onion endpoint.
+                        </p>
+                        <code
+                            style="background: #000; color: var(--xr-green); padding: 1rem; display: block; margin-top: 1rem; border: 1px solid #333; font-family: 'JetBrains Mono';">greentruthabcdef.onion</code>
+                        <div class="stats-ribbon" style="grid-template-columns: 1fr; margin-top: 1.5rem;">
+                            <div class="stat-mini">
+                                <span class="val">TOR INFO</span>
+                                <span class="lab">NO TRACE ENDPOINT</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="exposure-card">
+                    <header class="exposure-header"
+                        style="background: #111; color: white; border-bottom: 1px solid #333;">
+                        <div class="meta">
+                            <span class="id">PROTOCOL: AES-256</span>
+                            <span class="date">ENCRYPTED</span>
+                        </div>
+                    </header>
+                    <div class="exposure-content">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <i class="fas fa-envelope-open-text" style="font-size: 1.5rem; color: var(--xr-pink);"></i>
+                            <h3 style="margin: 0; font-family: 'Unbounded';">PGP Email</h3>
+                        </div>
+                        <p>For detailed communications. Encrypt all files using our public key before transmission.</p>
+                        <code
+                            style="background: #000; color: #aaa; padding: 1rem; display: block; margin-top: 1rem; border: 1px solid #333; font-family: 'JetBrains Mono'; font-size: 0.8rem;">FINGERPRINT: 1234 5678 90AB CDEF GHIJ</code>
+                        <div class="stats-ribbon" style="grid-template-columns: 1fr; margin-top: 1.5rem;">
+                            <div class="stat-mini">
+                                <span class="val">LEAKS@</span>
+                                <span class="lab">GTC-SECURE.ORG</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div style="margin-top: 6rem; max-width: 600px; margin-left: auto; margin-right: auto; text-align: center;">
+                <h3 style="color: white; font-family: 'Unbounded'; margin-bottom: 2rem;">PRESS & MEDIA</h3>
+                <div class="box-action"
+                    style="background: #111; border-color: var(--xr-blue); color: white; text-align: left;">
+                    <p style="margin-bottom: 1rem;"><i class="fas fa-at"
+                            style="color: var(--xr-blue); margin-right: 1rem;"></i> press@greentruth.org</p>
+                    <p><i class="fas fa-comments" style="color: var(--xr-blue); margin-right: 1rem;"></i>
+                        @greentruth:matrix.org</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="theme-blue">
+    <footer class="main-footer">
         <div class="container">
-            <div style="max-width: 600px;">
-                <h2 style="margin-bottom: 2rem;">PRESS & COLLABORATION</h2>
-                <p>For general inquiries or media requests, reach out via our encrypted matrix channel or standard
-                    email.</p>
-                <div class="box-action">
-                    <p><i class="fas fa-at fa-icon"></i>info@greentruth.org</p>
-                    <p><i class="fas fa-comments fa-icon"></i>@greentruth:matrix.org</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-box">
+                        <img src="img/Green Truth.png" alt="Green Truth Collective" class="footer-logo">
+                    </div>
+                    <div class="footer-logo-text">
+                        <h2>GREEN TRUTH COLLECTIVE</h2>
+                        <p class="logo-caption">No More Lies. No More Excuses. Only Truth.</p>
+                    </div>
+                    <p class="brand-desc">THE COLLECTIVE FOR DIGITAL ENVIRONMENTAL DEFENSE. WE INFILTRATE. WE EXPOSE. WE
+                        DISRUPT. NO MORE LIES. NO MORE GREENWASHING.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <h4>STRIKE_DIRECTORY</h4>
+                    <ul>
+                        <li><a href="index.html">COMMAND_CENTER</a></li>
+                        <li><a href="exposures.html">EXPOSURE_REPORTS</a></li>
+                        <li><a href="manifesto.html">THE_MANIFESTO</a></li>
+                        <li><a href="take-action.html">JOIN_RESISTANCE</a></li>
+                        <li><a href="contact.html">SECURE_COMMS</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-info">
+                    <h4>CORE_VALUES</h4>
+                    <div class="info-card">
+                        <p class="brand-desc">WE DO NOT BARGAIN. WE DO NOT COMPROMISE. PROTECTING THE PLANET IS NOT A
+                            POLL: IT IS A NECESSITY. JOIN_THE_COLLECTIVE.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <h2>GREEN TRUTH</h2>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">PRIVACY_POLICY</a>
+                    <a href="#">CORE_PROTOCOLS</a>
+                    <a href="#">PRESS_ASSETS</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 GREEN TRUTH COLLECTIVE. ALL RIGHTS RESERVED.
+                    <span class="sim-disclaimer">FICTIONAL CONTENT FOR EDUCATIONAL PURPOSES.</span>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="js/script.js"></script>
