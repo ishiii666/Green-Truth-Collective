@@ -1557,27 +1557,59 @@ section {
 
 /* Manifesto Page Styles */
 .manifesto-body {
-    background: #0a0a0a;
+    background: linear-gradient(180deg, #121e12 0%, #0a110a 100%);
     color: #dedede;
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.manifesto-body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .manifesto-container {
-    max-width: 900px;
+    max-width: 1550px;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 5rem 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .manifesto-block {
-    background: #111;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #1c2e1c;
+    /* Brighter organic dark green */
+    border: 1px solid rgba(184, 226, 75, 0.1);
     border-top: 4px solid var(--xr-green);
-    padding: 3rem;
-    margin-bottom: 4rem;
-    border-radius: 8px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    padding: 5rem;
+    margin-bottom: 6rem;
+    border-radius: 12px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
     position: relative;
     overflow: hidden;
+}
+
+.section-title-outside {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title-outside h3 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--xr-white);
+    font-family: 'Unbounded', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
 }
 
 .manifesto-header {
@@ -1586,15 +1618,9 @@ section {
     align-items: center;
     text-align: center;
     gap: 1.2rem;
-    margin-bottom: 3.5rem;
-    border-bottom: 1px solid #222;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding-bottom: 2rem;
-}
-
-.manifesto-header i {
-    font-size: 2.2rem;
-    color: var(--xr-green);
-    text-shadow: 0 0 15px rgba(184, 226, 75, 0.3);
 }
 
 .manifesto-header h3 {
@@ -1606,9 +1632,9 @@ section {
 }
 
 .manifesto-text {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.8;
-    color: #ccc;
+    color: #dedede;
     font-weight: 400;
 }
 
@@ -1617,71 +1643,95 @@ section {
 }
 
 .manifesto-quote-box {
-    background: linear-gradient(90deg, rgba(184, 226, 75, 0.05) 0%, transparent 100%);
+    background: rgba(184, 226, 75, 0.05);
     border-left: 4px solid var(--xr-green);
-    padding: 2rem;
-    margin: 2.5rem 0;
+    padding: 2.5rem;
+    margin: 3rem 0;
+    border-radius: 0 4px 4px 0;
 }
 
 .manifesto-quote-text {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.1rem;
+    font-family: 'Figtree', sans-serif;
+    font-size: 1.25rem;
     font-style: italic;
-    color: var(--xr-white);
-    line-height: 1.6;
-}
-
-.principles-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
-.principle-card {
-    background: #080808;
-    border: 1px solid #1a1a1a;
-    border-left: 3px solid var(--xr-green);
-    padding: 2rem;
-    border-radius: 6px;
-    transition: var(--transition);
-}
-
-.principle-card:hover {
-    border-color: rgba(184, 226, 75, 0.3);
-    background: #0c0c0c;
-    transform: translateX(5px);
-}
-
-.principle-card h4 {
     color: var(--xr-green);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+    line-height: 1.6;
+    font-weight: 500;
 }
 
-.principle-card p {
+.square-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* For all 5 in one line */
+.square-grid.principles {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.square-card,
+.step-card {
+    background: #1c2e1c;
+    /* Brighter organic dark green */
+    border: 1px solid rgba(184, 226, 75, 0.15);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 480px;
+    /* Ensure same size */
+    justify-content: flex-start;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.square-card:hover,
+.step-card:hover {
+    background: #253d25;
+    border-color: var(--xr-green);
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.principle-number {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--xr-green);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.square-card h4,
+.step-card strong {
+    color: var(--xr-white);
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    font-family: 'Unbounded', sans-serif;
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-card strong {
+    color: var(--xr-green);
+    /* Keep step numbering/titles green */
+}
+
+.square-card p,
+.step-card p {
     font-size: 1rem;
-    color: #bbb;
-    line-height: 1.6;
+    color: #ccc;
+    line-height: 1.7;
     margin: 0;
 }
 
-.greenwashing-steps {
-    border-left: 2px dashed #333;
-    padding-left: 1.5rem;
-    margin: 2rem 0;
-}
-
-.step-item {
-    margin-bottom: 1.5rem;
-}
-
-.step-item strong {
-    color: var(--xr-green);
-    font-family: 'Unbounded', sans-serif;
-    display: block;
-    margin-bottom: 0.3rem;
-}
 
 .warning-box {
     border: 2px solid var(--xr-green);
@@ -1700,28 +1750,31 @@ section {
 }
 
 .demand-section {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    margin-top: 3rem;
 }
 
 .demand-card {
-    border: 1px solid rgba(184, 226, 75, 0.3);
-    background: rgba(184, 226, 75, 0.03);
+    border: 1px solid rgba(184, 226, 75, 0.25);
+    background: #1c2e1c;
+    /* Matching square-card brightness */
     padding: 2.5rem;
-    border-radius: 8px;
-    position: relative;
+    border-radius: 12px;
+    height: 100%;
 }
 
 .demand-card-header {
     color: var(--xr-green);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 800;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-family: 'Unbounded', sans-serif;
-    border-bottom: 1px solid rgba(184, 226, 75, 0.2);
-    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(184, 226, 75, 0.2);
+    padding-bottom: 1rem;
     display: block;
+    text-align: center;
 }
 
 .demand-list {
