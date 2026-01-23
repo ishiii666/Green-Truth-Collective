@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&family=Figtree:wght@300;400;500;600;700&family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&display=swap');
 
 :root {
     /* Colors */
@@ -21,6 +21,28 @@
     --text-light: var(--xr-white);
     --border: var(--xr-black);
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --alert-red: #ff0000;
+}
+
+.simulation-alert {
+    background-color: var(--alert-red);
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+}
+
+.simulation-alert span {
+    display: inline-block;
 }
 
 * {
@@ -35,11 +57,12 @@ html {
 }
 
 body {
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     background-color: var(--xr-white);
     color: var(--xr-black);
     line-height: 1.6;
     overflow-x: hidden;
+    font-weight: 400;
 }
 
 /* Typography */
@@ -78,7 +101,7 @@ section h2,
 
 
 .mono {
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     letter-spacing: 0.1em;
     font-weight: 600;
     text-transform: uppercase;
@@ -124,7 +147,8 @@ header {
     /* Tightened from 1rem */
     border-bottom: 2px solid var(--xr-black);
     position: sticky;
-    top: 0;
+    top: 45px;
+    /* Adjust for simulation alert height */
     z-index: 2000;
 }
 
@@ -162,13 +186,14 @@ header {
 }
 
 .logo-caption {
-    font-size: clamp(0.7rem, 2vw, 0.95rem);
+    font-size: clamp(0.7rem, 2vw, 0.85rem);
     margin-left: 1.5rem;
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-weight: 500;
     color: var(--xr-black);
     opacity: 0.8;
     margin-top: 8px;
+    letter-spacing: 0;
 }
 
 
@@ -292,8 +317,8 @@ section {
 }
 
 .shame-caption {
-    font-family: 'Figtree', sans-serif;
-    font-size: 0.9rem;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 0.85rem;
     color: rgba(0, 0, 0, 0.85);
     max-width: 750px;
     line-height: 1.6;
@@ -633,7 +658,7 @@ section {
 
 .action-details p strong {
     color: white;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
 }
 
 .stats-ribbon {
@@ -669,7 +694,7 @@ section {
 .stat-mini .lab {
     font-size: 0.65rem;
     text-transform: uppercase;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     color: #888;
     font-weight: 700;
 }
@@ -715,7 +740,7 @@ section {
 }
 
 .ongoing-status-card .status-highlight {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     display: inline-block;
     margin-top: 2rem;
     font-weight: 700;
@@ -805,7 +830,7 @@ section {
 }
 
 .impact-caption {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     font-size: 0.9rem;
     opacity: 0.6;
     max-width: 600px;
@@ -875,7 +900,7 @@ section {
 }
 
 .stat-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 1.5px;
@@ -931,7 +956,7 @@ section {
     position: absolute;
     top: 2rem;
     right: 2rem;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     color: var(--xr-green);
     font-size: 0.65rem;
     text-align: right;
@@ -961,7 +986,7 @@ section {
     left: 40px;
     background: var(--xr-green);
     color: var(--xr-black);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     font-size: 0.7rem;
     font-weight: 800;
     padding: 2px 10px;
@@ -1023,7 +1048,7 @@ section {
 }
 
 .mission-tag {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     font-size: 0.8rem;
     color: var(--xr-green);
     font-weight: 800;
@@ -1083,7 +1108,7 @@ section {
 }
 
 .threat-text {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     font-size: 0.75rem;
     color: #fff;
     font-weight: 700;
@@ -1105,7 +1130,7 @@ section {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     font-size: 0.7rem;
     color: var(--xr-green);
     opacity: 0.3;
@@ -1113,7 +1138,7 @@ section {
 }
 
 .operation-caption {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     font-size: 1rem;
     color: var(--xr-white);
     opacity: 0.9;
@@ -1183,7 +1208,7 @@ section {
     position: absolute;
     top: 15px;
     right: 15px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     font-weight: 800;
     font-size: 0.9rem;
     color: var(--xr-green);
@@ -1241,7 +1266,7 @@ section {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-size: 0.7rem;
     color: var(--xr-green);
     opacity: 0.3;
@@ -1346,11 +1371,11 @@ section {
 }
 
 .main-footer {
-    background-color: #050805;
-    color: #dedede;
+    background-color: var(--xr-white);
+    color: var(--xr-black);
     padding: 3rem 0 2rem;
     /* Compact padding */
-    border-top: 2px solid var(--xr-green);
+    border-top: 2px solid var(--xr-black);
     /* Stronger indicator */
     position: relative;
     overflow: hidden;
@@ -1405,12 +1430,13 @@ section {
 }
 
 .brand-desc {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.6;
-    color: rgba(224, 238, 212, 0.7);
+    color: var(--xr-black);
+    opacity: 0.8;
     max-width: 400px;
     margin-bottom: 1.5rem;
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-weight: 400;
 }
 
@@ -1452,12 +1478,13 @@ section {
 }
 
 .footer-nav a {
-    color: rgba(224, 238, 212, 0.6);
+    color: var(--xr-black);
+    opacity: 0.7;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: var(--transition);
     font-weight: 500;
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Unbounded', sans-serif;
 }
 
 .footer-nav a:hover {
@@ -1481,7 +1508,7 @@ section {
 }
 
 .footer-legal a {
-    color: rgba(224, 238, 212, 0.4);
+    color: rgba(0, 0, 0, 0.6);
     text-decoration: none;
     font-size: 0.8rem;
     transition: var(--transition);
@@ -1493,7 +1520,7 @@ section {
 
 .copyright {
     font-size: 0.8rem;
-    color: rgba(224, 238, 212, 0.4);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .sim-disclaimer {
@@ -1683,7 +1710,7 @@ section {
 }
 
 .manifesto-quote-text {
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-size: 1.25rem;
     font-style: italic;
     color: var(--xr-green);
@@ -1851,7 +1878,7 @@ section {
 }
 
 .manifesto-caption {
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-size: 1rem;
     color: rgba(0, 0, 0, 0.8);
     max-width: 750px;
@@ -2115,7 +2142,7 @@ section {
 }
 
 .action-hero-caption {
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-size: 1.15rem;
     color: rgba(0, 0, 0, 0.85);
     max-width: 850px;
@@ -2230,7 +2257,7 @@ section {
     background: #000;
     border: 1px solid #333;
     padding: 1.2rem;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Unbounded', sans-serif;
     color: var(--xr-green);
     font-size: 0.9rem;
     margin: 1.5rem 0;
@@ -2275,7 +2302,7 @@ section {
 .faq-question h4 {
     margin: 0;
     font-size: 1.2rem;
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-weight: 700;
     letter-spacing: 0.02em;
     text-transform: none;
